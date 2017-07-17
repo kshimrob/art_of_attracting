@@ -1,0 +1,689 @@
+/*
+Theme Name: Skillcrush Starter Theme
+Author: the Skillcrush team
+Author URI: http://skillcrush.com
+Description: This theme is for use in Skillcrush 103, Skillcrush 203 and the Skillcrush WordPress Developer Career Blueprint.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: skillcrushstarter
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/** Clearfix **/
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+/** end CSS reset **/
+
+/** theme styles start here! **/
+
+/* FONTS */
+
+/* MAIN STYLES */
+header, footer, section, aside, time, article {
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: #958BD3;
+  transition: all 0.2s ease-in;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: #fff;
+  color: #3b3b3b;
+  font: 17px/1.65 'Montserrat', Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+#page {
+  width: 100%;
+  margin: auto;
+}
+
+/* HEADER STYLES */
+
+.page-header {
+  /*border-bottom: 1px solid #bfbfbf;*/
+  padding: 1rem 4rem;
+  overflow: hidden;
+  position: fixed;
+  background: #fff;
+  z-index: 1;
+  width: 100%;
+}
+.page-header a {
+  text-decoration: none;
+  color: #958BD3;
+  letter-spacing: 2px;
+}
+
+.page-header .top-logo {
+  color: inherit;
+  float: left;
+  height: 170px;
+  width: 600px;
+  background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/logo2.svg) 100px 75px/70% no-repeat, 
+  url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/header2.png) 0 0/80% no-repeat;
+  transition: none;
+}
+
+.page-header .top-logo:hover {
+  /*background-position: 0 -127px;*/
+}
+.page-header .top-logo .title {
+  color: #958BD3;
+  font: bold 1.88em/1.3125 'Montserrat', 'OpenSans', Arial, sans-serif;
+  letter-spacing: -0.034em;
+  display: block;
+  text-transform: uppercase;
+}
+
+.page-header .top-logo .sub-title {
+  color: inherit;
+  display: block;
+}
+.page-header .top-nav {
+  float: right;
+}
+.page-header .top-nav ul li {
+  display: inline;
+  line-height: 170px;
+}
+.page-header .top-nav ul li a {
+  color: inherit;
+  font-size: 12px;
+  line-height: normal;
+  margin-left: 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.page-header .top-nav ul li a:hover{
+  color: #e10098;
+}
+
+/** From blog.css **/
+
+#main {
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* BLOG styles */
+.post-entry {
+  border-bottom: 1px solid #bfbfbf;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.entry-title {
+  margin: 0.25em 0;
+  font: bold 1.47em/1.4 'Montserrat', sans-serif;
+  letter-spacing: -0.034em;
+}
+.entry-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.entry-title a:hover {
+  color: #45ac9d;
+}
+.entry-time {
+  color: #45ac9d;
+  font-weight: 600;
+  font-size: 0.82em;
+}
+.entry-summary {
+  font-size: 0.94em;
+}
+.entry-summary .wp-caption {
+  margin: 25px 0;
+  width: 100%;
+  border: 1px solid #bfbfbf;
+}
+.entry-summary .wp-caption iframe {
+  width: 100%;
+  height: 375px;
+  display: block;
+}
+.entry-summary a {
+  color: #45ac9d;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.entry-summary a:hover {
+  text-decoration: none;
+}
+.entry-summary blockquote {
+  margin: 0 47px;
+  padding: 0 14px;
+  position: relative;
+  font: 1.6em/1.45 'Montserrat', 'OpenSans', sans-serif;
+  quotes: '“ ' ' ”' ;
+}
+.entry-summary blockquote p {
+  margin-bottom: 0.9em;
+}
+.entry-summary blockquote p:before {
+  content: '“';
+  margin-left: -14px;
+  padding-right: 5px;
+}
+.entry-summary blockquote p:after {
+  content: '”';
+  margin-right: -14px;
+  padding-left: 5px;
+}
+.entry-summary blockquote footer {
+  line-height: 0.8em;
+  font-size: 0.9em;
+}
+.entry-summary blockquote footer:before {
+  content: '—';
+}
+.post-entry img {
+  max-width: 100%;
+}
+.entry-footer .entry-terms {
+  color: #a6a6a6;
+  font-size: 0.82em;
+}
+.entry-footer {
+  margin-top: 1.5em;
+}
+.entry-footer .entry-terms a {
+  color: #3b3b3b;
+  font-weight: 600;
+  text-decoration: none;
+}
+.entry-footer .entry-terms a:hover {
+  text-decoration: underline;
+}
+.entry-footer .entry-terms + .entry-terms:before {
+  content: '/';
+  padding: 0 10px;
+}
+.post-entry .read-more {
+  color: #150300;
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 2.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.post-entry .read-more span {
+  color: #45ac9d; 
+}
+.post-entry .read-more:hover {
+  border-bottom: 1px solid #45ac9d;
+}
+
+.main-content p {
+  padding-bottom: 1rem;
+}
+.main-content .post-entry:last-child {
+  border-bottom: 0;
+}
+
+.main-content h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 0;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+}
+
+.main-content h2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 15%;
+  border-bottom: 1px solid #e5e5e7;
+}
+
+/* end BLOG styles */
+
+/* sidebar */
+#sidebar {
+  padding-top: 100px;
+  width: 400px;
+  display: inline-block;
+}
+#sidebar li {
+  list-style-type: none;
+}
+
+#sidebar p {
+  font: 300 14px/28px 'Montserrat', Arial, sans-serif;
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+
+#sidebar .widget_text {
+  background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/menu6.png) -20px 10px/100% no-repeat;
+}
+#sidebar .widget_text img {
+  margin: 50px auto 0 auto;
+  width: 60%;
+  border-radius: 100%;
+  display: block;
+}
+
+#sidebar .widget_text p {
+  padding: 10px 0;
+  text-align: center;
+}
+
+#sidebar .widget_text p:first-child {
+  padding: 0 0 30px 0;
+  text-align: center;
+}
+
+
+#sidebar .textwidget {
+  padding: 50px 80px;
+}
+#sidebar .widget_text a {
+  color: #8e44ad;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+#sidebar .widget_text a:hover {
+  color: #C589DD;
+}
+
+#sidebar .widget_search {
+  border-bottom: 1px solid #BFBFBF;
+}
+#sidebar .widget_search input[type="text"] {
+  border-top: 1px solid #a6a6a6;
+  border-bottom: 1px solid #a6a6a6;
+  border-left: 1px solid #a6a6a6;
+  border-right: none;
+  width: 200px;
+  height: 36px;
+  padding: 8px;
+  vertical-align: middle;
+}
+#sidebar .widget_search input[type="submit"] {
+  border-top: 1px solid #a6a6a6;
+  border-bottom: 1px solid #a6a6a6;
+  border-right: 1px solid #a6a6a6;
+  border-left: none;
+  width: 35px;
+  height: 36px;
+  background: url('img/white-arrow-right.png') no-repeat 13px 10px #45ac9d;
+  color: #ffffff;
+  margin-left: -5px;
+  vertical-align: middle;
+}
+#sidebar .widget_categories {
+  padding: 80px 80px;
+}
+#sidebar .widget_categories h2,
+#sidebar .widget_archive h2 {
+  font: 700 14px 'Montserrat';
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+#sidebar h2.widget-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font: 300 14px 'Montserrat';
+}
+#sidebar .widget_categories ul li,
+#sidebar .widget_archive ul li {
+  font: 300 14px 'Montserrat';
+  color: #ccc;
+  margin-bottom: 15px;
+}
+#sidebar .widget_categories ul li a,
+#sidebar .widget_archive ul li a {
+  color: #ccc;
+}
+
+#sidebar .widget_categories ul li a:hover,
+#sidebar .widget_archive ul li a:hover {
+  color: #e10098;
+}
+
+/* Next / prev */
+#navigation {
+  background: #fff;
+  border: solid #bfbfbf;
+  border-width: 1px 0;
+  clear: both;
+  font: 0.8em/4.08 'OpenSans', Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#navigation .left {
+  float: left;
+}
+#navigation .right {
+  float: right;
+}
+#navigation .left a,
+#navigation .right a {
+  color: #45ac9d;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#navigation .left a span,
+#navigation .right a span {
+  color: #150300;
+}
+#navigation .left a span {
+  padding-left: 8px;
+}
+#navigation .right a span {
+  padding-right: 8px;
+}
+#navigation .left a:hover,
+#navigation .right a:hover {
+  text-decoration: none;
+}
+#navigation .left a:hover span,
+#navigation .right a:hover span {
+  text-decoration: underline;
+}
+/* End next / prev */
+
+/* single posts */
+.single .post-entry {
+  border-bottom: none;
+}
+.comments-area {
+  margin-bottom: 80px;
+  clear: both;
+  overflow: hidden;
+}
+.comments-area .comments-title {
+  border: solid #bfbfbf;
+  border-width: 1px 0;
+  color: #150300;
+  font: 600 0.8em/49px 'OpenSans', Arial, sans-serif;
+  height: 49px;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+.comment-list {
+  margin-bottom: 50px;
+}
+.comment-list .comment-head {
+  margin: 25px 0 10px;
+}
+.comment-list .comment {
+  font: 0.8em/2.08em 'OpenSans', Arial, sans-serif;
+  border-bottom: 1px solid #BFBFBF;
+  padding-bottom: 23px;
+}
+.comment-list .comment .comment-meta {
+  float: right;
+}
+.comment-list .comment a {
+  color: #45ac9d;
+  text-decoration: none;
+}
+.comment-list .comment a:hover {
+  text-decoration: underline;
+}
+.comment-list .comment .comment-author {
+  font-weight: 600;
+}
+.comments-area .comment-reply-title {
+  color: #45ac9d;
+  font: bold 1.176em 'Montserrat', 'OpenSans', Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 2em 0 1em;
+}
+.comments-area .comment-reply-title a {
+  color: #45ac9d;
+}
+.comments-area .comment-reply-title a:hover {
+  text-decoration: underline;
+}
+.comments-area .comment-form p {
+  font: 0.8em/2.08em 'OpenSans', Arial, sans-serif;
+  padding-bottom: 23px;
+}
+.comments-area .comment-form p a {
+  color: #45ac9d;
+}
+.comments-area .comment-form p a:hover {
+  text-decoration: underline;
+}
+.comments-area .comment-form label {
+  display: block;
+  font: 600 1em 'OpenSans', Arial, sans-serif;
+  margin: 10px 0;
+}
+.comments-area .comment-form textarea {
+  height: 180px;
+  width: 100%;
+  resize: none;
+  font: 16px 'OpenSans', Arial, sans-serif;
+  padding: 5px 10px;
+}
+.comments-area .comment-form input[type="submit"] {
+  background: #45ac9d;
+  width: 206px;
+  height: 55px;
+  font: bold 1.3em/45px 'Montserrat', 'OpenSans', Arial, sans-serif;
+  color: #fff;
+  margin: 24px 0;
+  float: right;
+  border: 0;
+}
+
+/* page styles */
+
+
+.default-page .main-content {
+  padding: 50px;
+  width: 100%;
+}
+
+h2.page-title {
+  font: 1.5rem 'Montserrat', 'OpenSans', Arial, sans-serif;
+  text-align: center;
+}
+
+.post-entry {
+  padding: 10px 0;
+  /*text-align: center;*/
+  margin: 0 auto;
+}
+
+.post-entry .image-center {
+  text-align: center;
+}
+
+/* FRONT PAGE */
+
+/* HOMEPAGE STYLES */
+.home {
+  width: 100%;
+  background: url(img/Skillcrush_Computer.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home .content {
+  max-width: 600px;
+  background: #ffffff;
+  padding: 3em;
+}
+.home .main-content {
+  width: 800px;
+  padding: 10rem 3rem 6rem 0;
+  float: left;
+}
+
+.main-content img {
+  width: 100%;
+  height: auto;
+}
+.home .content h1 {
+  font: 700 2.25em/1.5 'Montserrat', 'OpenSans', Arial, sans-serif;
+  margin: 0 0 1em;
+}
+.home .content p {
+  font: 1em/2 'OpenSans', Arial, sans-serif;
+  margin-bottom: 2em;
+}
+.home .content p a {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #3b3b3b;
+}
+.home .content .social-btns {
+  margin-bottom: 1.875em;
+}
+.home .content .social-btns a {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: .5em;
+}
+.home .content .soc-icon.tw {
+  background: url(img/twitter-icon.png) no-repeat center 0;
+  background-size: cover;
+}
+.home .content .soc-icon.fb {
+  background: url(img/facebook-icon.png) no-repeat center 0;
+  background-size: cover;
+}
+.home .content .soc-icon.ln {
+  background: url(img/linkedin-icon.png) no-repeat center 0;
+  background-size: cover;
+}
+.home .content .soc-icon.db {
+  background: url(img/dribbble-icon.png) no-repeat center 0;
+  background-size: cover;
+}
+.home .content .soc-icon.gh {
+  background: url(img/github-icon.png) no-repeat center 0;
+  background-size: cover;
+}
+.home .content .soc-icon.in {
+  background: url(img/instagram-icon.png) no-repeat center 0;
+  background-size: cover;
+}
+.home .btn {
+  background: #958BD3;
+  color: #fff;
+  font: 700 1.125em/3.5 'Montserrat', 'OpenSans', Arial, sans-serif;
+  display: inline-block;
+  height: 3.5em;
+  width: 100%;
+  padding: 0 1.25em;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* media queries */
+/*@media (min-width: 768px) {
+  .home .main-content {
+    float: right;
+  }
+  .home .content {
+    float: right;
+  }
+}*/
+/* End HOMEPAGE STYLES */
+
+.entry-summary img {
+  width: 50%;
+  height: auto;
+}
+
+/* Footer Styles */
+
+footer {
+}
