@@ -24,7 +24,7 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<header class="page-header container">
-			<a href="<?php echo site_url(); ?>" class="top-logo">
+			<a href="<?php echo site_url(); ?>" class="top-logo bg2">
 			</a>
 
 			<nav class="top-nav">

@@ -17,9 +17,6 @@ $content = apply_filters('the_content', $page->post_content);
 echo $content;
 ?>
   </div>
-  
-  <?php get_sidebar(); ?>
-  
 </section>
 
 <?php get_footer(); ?>

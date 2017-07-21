@@ -96,8 +96,7 @@ header, footer, section, aside, time, article {
 }
 a {
   text-decoration: none;
-  color: #958BD3;
-  transition: all 0.2s ease-in;
+  transition: all 0.25s ease-in-out;
 }
 html,
 body {
@@ -118,17 +117,15 @@ body {
 /* HEADER STYLES */
 
 .page-header {
-  /*border-bottom: 1px solid #bfbfbf;*/
-  padding: 1rem 4rem;
-  overflow: hidden;
+  padding: 10px 70px;
   position: fixed;
   background: #fff;
   z-index: 1;
   width: 100%;
+  height: 200px;
 }
+
 .page-header a {
-  text-decoration: none;
-  color: #958BD3;
   letter-spacing: 2px;
 }
 
@@ -137,14 +134,11 @@ body {
   float: left;
   height: 170px;
   width: 600px;
-  background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/logo2.svg) 100px 75px/70% no-repeat, 
-  url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/header2.png) 0 0/80% no-repeat;
+  background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/logo3.svg) 95px 50px/60% no-repeat, 
+  url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/header2.png) 0 10px/80% no-repeat;
   transition: none;
 }
 
-.page-header .top-logo:hover {
-  /*background-position: 0 -127px;*/
-}
 .page-header .top-logo .title {
   color: #958BD3;
   font: bold 1.88em/1.3125 'Montserrat', 'OpenSans', Arial, sans-serif;
@@ -162,7 +156,7 @@ body {
 }
 .page-header .top-nav ul li {
   display: inline;
-  line-height: 170px;
+  line-height: 200px;
 }
 .page-header .top-nav ul li a {
   color: inherit;
@@ -171,17 +165,56 @@ body {
   margin-left: 35px;
   text-decoration: none;
   text-transform: uppercase;
+  position: relative;
+}
+
+.page-header .top-nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 1px;
+  bottom: -2px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  background-color: #e10098;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
 }
 
 .page-header .top-nav ul li a:hover{
   color: #e10098;
 }
 
+.page-header .top-nav ul li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* on scroll do #F7F7F9 and shrink the size of the logo to just the text */
+
+/* Landing (Welcome) Page Styles */
+
+.landing-header {
+  background: #e5e5e7;
+  height: 300px;
+  padding: 200px 0 0 100px;
+}
+
+.landing-header h1 {
+  font: 2rem ;
+}
+
 /** From blog.css **/
 
 #main {
   padding-top: 100px;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -316,6 +349,15 @@ body {
   width: 100%;
   left: 15%;
   border-bottom: 1px solid #e5e5e7;
+}
+
+.main-content blockquote {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  width: 800px;
+  padding: 20px 0;
 }
 
 /* end BLOG styles */
@@ -585,24 +627,11 @@ h2.page-title {
 /* FRONT PAGE */
 
 /* HOMEPAGE STYLES */
-.home {
-  width: 100%;
-  background: url(img/Skillcrush_Computer.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 .home .content {
   max-width: 600px;
   background: #ffffff;
   padding: 3em;
-}
-.home .main-content {
-  width: 800px;
-  padding: 10rem 3rem 6rem 0;
-  float: left;
 }
 
 .main-content img {
