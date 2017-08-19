@@ -140,7 +140,7 @@ body {
   float: left;
   height: 170px;
   width: 470px;
-  background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/logo4.svg) 85px 45px/72% no-repeat, 
+  background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/logo4.svg) 55px 25px/72% no-repeat, 
   url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/header2.png) 0 10px/95% no-repeat;
   transition: none;
 }
@@ -243,8 +243,6 @@ body {
   background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/logo4.svg) 85px 45px/70% no-repeat, 
   url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/header2.png) 0 10px/100% no-repeat;
   }
-
-
 }
 
 /* on scroll do #F7F7F9 and shrink the size of the logo to just the text */
@@ -303,7 +301,7 @@ body {
 }
 
 .landing-steps h2 > img {
-  width: 150px;
+  height: 110px;
 }
 
 .landing-steps > h2:before {
@@ -398,11 +396,22 @@ body {
 }
 
 /* BLOG styles */
+
+.blog .site-main {
+  
+}
+
+.blog .main-content {
+  float: left;
+  width: 69%;
+  padding: 75px 100px;
+}
 .post-entry {
   border-bottom: 1px solid #bfbfbf;
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
+
 .entry-title {
   margin: 0.25em 0;
   font: bold 1.47em/1.4 'Montserrat', sans-serif;
@@ -506,7 +515,7 @@ body {
 }
 
 .main-content p {
-  padding-bottom: 1rem;
+  padding: 0.5rem 0;
 }
 .main-content .post-entry:last-child {
   border-bottom: 0;
@@ -525,7 +534,6 @@ body {
 
 /* sidebar */
 #sidebar {
-  padding-top: 100px;
   width: 400px;
   display: inline-block;
 }
@@ -675,7 +683,7 @@ body {
 }
 /* End next / prev */
 
-/* single posts */
+/* SINGLE POSTS */
 .single .post-entry {
   border-bottom: none;
 }
@@ -776,35 +784,57 @@ body {
 }
 
 .post-entry h1 {
-  width: 500px;
+  margin-bottom: 2rem;
+}
+
+.post-entry h1,
+.post-entry h2 {
   text-align: center;
 }
 
-.post-entry img {
-  width: 100%;
+.post-entry h1 img{
+  height: 130px;
+}
+
+.post-entry p:first-child {
+  text-align: center;
+}
+
+.post-entry p img {
+  width: 70%;
   height: auto;
 }
 
-/*.default-page h2:before {
+.post-entry h2 {
+ position: relative;
+ padding-top: 2rem;
+}
+
+.post-entry h2 img{
+  height: 110px;
+}
+
+.post-entry h2:before {
   content: "";
-  width: 43%;
+  width: 25%;
   height: 2px;
   background-color: #e5e5e5;
-  top: calc(50% - (1px / 2));
+  top: 40%;
   position: absolute;
   left: 0;
-}*/
+}
 
-/*.default-page h2:after {
+.post-entry h2:after {
   content: "";
-  width: 43%;
+  width: 25%;
   height: 2px;
   background-color: #e5e5e5;
-  top: calc(50% - (1px / 2));
+  top: 40%;
   position: absolute;
   right: 0;
 }
-*/
+
+
 .default-page a,
 .default-page a:visited {
   color: #e10098;
@@ -815,7 +845,39 @@ body {
   opacity: 0.6;
 }
 
-/* FRONT PAGE */
+/* ABOUT PAGE */
+
+.default-page blockquote {
+  /* put the background here */
+}
+
+.default-page blockquote.five-list {
+  overflow: visible;
+  padding: 100px 0;
+  vertical-align: middle;
+  color: white;
+  background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/08/list2.png) 48% 0/50% no-repeat;
+}
+
+.default-page .button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-weight: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e10098;
+  padding: 1rem;
+  border: 1px solid #e10098;
+}
+
+.default-page .button:hover {
+  background-color: #e10098;
+  color: white;
+  opacity: 1;
+}
 
 /* HOMEPAGE STYLES */
 
@@ -903,9 +965,108 @@ body {
   height: auto;
 }
 
+/* SIDEBAR TEMPLATE STYLES*/
+
+.sidebar-page {
+  padding: 100px 200px 75px 200px;
+}
+
+.sidebar-page:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.site-main .sidebar-page #sidebar {
+  float: right;
+}
+
+div.sidebar-page-content {
+  padding-top: 100px;
+  margin-right: 2%;
+  width: 55%;
+  float: left;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-weight: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e10098;
+  padding: 1rem;
+  border: 1px solid #e10098;
+  background-color: transparent;
+  transition: all 0.25s ease-in-out;
+}
+
+.button:hover {
+  background-color: #e10098;
+  color: white;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* CONTACT PAGE STYLES */
+
+.sidebar-page-content .contact-page-form {
+  width: 100%;
+}
+
+.contact-page-form div.wpcf7 {
+  margin-bottom: 50px;
+}
+
+div.wpcf7 textarea,
+div.wpcf7 input[type=email],
+div.wpcf7 input[type=text] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  margin: 10px 0 30px 0;
+}
+
+div.wpcf7 textarea {
+  margin-bottom: 0;
+}
+
+article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+input[type=submit] {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-weight: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e10098;
+  padding: 1rem;
+  border: 1px solid #e10098;
+  background-color: transparent;
+  transition: all 0.25s ease-in-out;
+}
+
+input[type=submit]:hover {
+  background-color: #e10098;
+  color: white;
+  opacity: 1;
+  cursor: pointer;
+}
+
 /* Footer Styles */
 
-footer {
+footer.page-footer {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 12px;
@@ -923,20 +1084,20 @@ footer {
   margin-bottom: 50px;
 }
 
-footer ul li {
+footer.page-footer ul li {
   display: inline-block;
   margin: 0 10px;
 }
 
-footer a,
-footer a:visited {
+footer.page-footer a,
+footer.page-footer a:visited {
   color: white;
   text-decoration: none;
   position: relative;
   opacity: 0.6;
 }
 
-footer a:before {
+footer.page-footer a:before {
   content: "";
   position: absolute;
   width: 99%;
@@ -954,12 +1115,12 @@ footer a:before {
   transition: all 0.25s ease-in-out 0s;
 }
 
-footer a:hover{
+footer.page-footer a:hover{
   opacity: 1.0;
 }
 
-footer .footer-links a:hover:before,
-footer p a:hover:before {
+footer.page-footer .footer-links a:hover:before,
+footer.page-footer p a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);

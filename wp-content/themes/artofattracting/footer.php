@@ -12,16 +12,16 @@
 
 
 		</div><!-- #main -->
-<footer>
+<footer class="page-footer">
   <ul class="footer-links">
-    <li><a href="#">Support/Contact</a></li>
+    <li><a href="http://localhost:8888/art_of_attracting/contact/">Contact</a></li>
     <li><a href="#">Privacy</a></li>
     <li><a href="#">Terms</a></li>
   </ul>
   <ul class="footer-social-media">
-    <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+    <li><a href="https://www.facebook.com/jessicamelandcoach/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+    <li><a href="https://www.instagram.com/artofattracting/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    <li><a href="mailto:hola@artofattracting.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
   </ul>
   <p>Copyright © 2017 Jessica Meland</p>
   <p>Created with love by <a href="https://www.spacethymedesign.com">Space Thyme Design</a></p>

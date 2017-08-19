@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for the homepage
+ * This is the template for the blog landing page.
  *
  * @package WordPress
  * @subpackage Skillcrush_Starter
@@ -27,4 +27,8 @@ get_header(); ?>
     </div>
   <?php endif; ?>
 </section>
-</body>
+
+<?php get_footer(); ?>
+
+
+

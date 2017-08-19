@@ -12,10 +12,10 @@ get_header(); ?>
 <section class="index-page">    
   <div class="main-content">
     <?php
-$page = get_page_by_title( 'Welcome' );
-$content = apply_filters('the_content', $page->post_content); 
-echo $content;
-?>
+      $page = get_page_by_title( 'Welcome' );
+      $content = apply_filters('the_content', $page->post_content); 
+      echo $content;
+    ?>
   </div>
 </section>
 

@@ -84,3 +84,19 @@ function my_custom_scripts() {
    wp_enqueue_script( 'my-custom-scripts', get_stylesheet_directory_uri() . '/scripts.js');
 }
 add_action('wp_enqueue_scripts','my_custom_scripts');
+
+// Custom posts - services
+function create_custom_post_types() {
+    register_post_type( 'work_with_me',
+        array(
+            'labels' => array(
+                'name' => __( 'Work with Me' ),
+                'singular_name' => __( 'Service' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'work_with_me' ),
+        )
+    );
+}
+add_action( 'init', 'create_custom_post_types' );
