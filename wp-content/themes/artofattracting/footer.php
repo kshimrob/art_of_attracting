@@ -15,8 +15,8 @@
 <footer class="page-footer">
   <ul class="footer-links">
     <li><a href="http://localhost:8888/art_of_attracting/contact/">Contact</a></li>
-    <li><a href="#">Privacy</a></li>
-    <li><a href="#">Terms</a></li>
+    <li><a href="http://localhost:8888/art_of_attracting/privacy">Privacy</a></li>
+    <li><a href="http://localhost:8888/art_of_attracting/privacy">Terms</a></li>
   </ul>
   <ul class="footer-social-media">
     <li><a href="https://www.facebook.com/jessicamelandcoach/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
