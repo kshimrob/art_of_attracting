@@ -201,7 +201,7 @@ body {
   transform: scaleX(1);
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1140px) {
   .page-header {
     height: auto;
   }
@@ -249,10 +249,10 @@ body {
 /* LANDING BANNER */
 
 .landing-header {
-  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 80% 40px/350px no-repeat, #7cf0e1;
-  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 80% 40px/350px no-repeat, -moz-linear-gradient(-45deg, #DB39A5 0%, #88a6ec 80%);
-  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 80% 40px/350px no-repeat, -webkit-linear-gradient(-45deg,  #DB39A5 0%, #88a6ec 80%);
-  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 80% 40px/350px no-repeat, linear-gradient(-45deg,  #DB39A5 0%, #88a6ec 80%);
+  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 850px 50px/350px no-repeat, #7cf0e1;
+  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 850px 50px/350px no-repeat, -moz-linear-gradient(-45deg, #DB39A5 0%, #88a6ec 80%);
+  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 850px 50px/350px no-repeat, -webkit-linear-gradient(-45deg,  #DB39A5 0%, #88a6ec 80%);
+  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 850px 50px/350px no-repeat, linear-gradient(-45deg,  #DB39A5 0%, #88a6ec 80%);
   height: 400px;
   padding: 100px 0 0 15%;
   position: relative;
@@ -260,8 +260,6 @@ body {
 
 .landing-header h1 {
   margin-top: 50px;
-  width: 500px;
-  margin-left: 50px;
 }
 
 .landing-header h1 img {
@@ -273,17 +271,48 @@ body {
   letter-spacing: 0.5px;
   width: 450px;
   padding: 0;
-  position: absolute;
-  top: 275px;
-  left: 425px;
+  margin-left: 180px;
+  margin-top: -40px;
 }
 
 @media (max-width: 1130px) {
   .landing-header {
-  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 100% 160px/350px no-repeat, #7cf0e1;
-  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 100% 160px/350px no-repeat, -moz-linear-gradient(-45deg, #7cf0e1 0%, #aa76f2 100%);
-  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 100% 160px/350px no-repeat, -webkit-linear-gradient(-45deg, #7cf0e1 0%,#aa76f2 100%);
-  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 100% 160px/350px no-repeat, linear-gradient(135deg, #7cf0e1 0%,#aa76f2 100%);
+  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 600px 50px/350px no-repeat, #7cf0e1;
+  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 600px 50px/350px no-repeat, -moz-linear-gradient(-45deg, #DB39A5 0%, #88a6ec 80%);
+  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 600px 50px/350px no-repeat, -webkit-linear-gradient(-45deg, #DB39A5 0%, #88a6ec 80%);
+  background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 600px 50px/350px no-repeat, linear-gradient(-45deg, #DB39A5 0%, #88a6ec 80%);
+  }
+
+  .landing-header {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-header {
+    background: #7cf0e1;
+    background: -moz-linear-gradient(-45deg, #DB39A5 0%, #88a6ec 80%);
+    background: -webkit-linear-gradient(-45deg,  #DB39A5 0%, #88a6ec 80%);
+    background: linear-gradient(-45deg,  #DB39A5 0%, #88a6ec 80%);
+  }
+}
+
+@media (max-width: 620px) {
+  .landing-header h1 {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  .landing-header h1 img {
+    width: 100%;
+  }
+
+  .main-content .landing-header h2 {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
   }
 }
 
@@ -291,7 +320,7 @@ body {
 
 .landing-steps {
   background-color: #F7F7F7;
-  padding: 75px 300px;
+  padding: 75px 20%;
 }
 
 .landing-steps > h2 {
@@ -360,7 +389,7 @@ body {
 
 .landing-about {
   background-color: #fff;
-  padding: 75px 300px;
+  padding: 75px 20%;
 }
 
 .landing-about img {
@@ -384,6 +413,31 @@ body {
 
 .landing-about p:nth-of-type(2) {
   padding-bottom: 0;
+}
+
+@media (max-width: 1070px) {
+  .landing-about,
+  .landing-steps {
+    padding: 75px 5%;
+  }
+
+  .landing-about .about-image,
+  .landing-about p {
+    clear: both;
+  }
+
+  .landing-about .about-image {
+    float: none;
+    margin: 0 auto;
+    height: 300px;
+  }
+}
+
+@media (max-width: 620px) {
+  .landing-steps > h2:before,
+  .landing-steps > h2:after {
+  width: 25%;
+}
 }
 
 /** From blog.css **/
@@ -472,26 +526,7 @@ body {
   font: 1.6em/1.45 'Montserrat', 'OpenSans', sans-serif;
   quotes: '“ ' ' ”' ;
 }*/
-.entry-summary blockquote p {
-  margin-bottom: 0.9em;
-}
-.entry-summary blockquote p:before {
-  content: '“';
-  margin-left: -14px;
-  padding-right: 5px;
-}
-.entry-summary blockquote p:after {
-  content: '”';
-  margin-right: -14px;
-  padding-left: 5px;
-}
-.entry-summary blockquote footer {
-  line-height: 0.8em;
-  font-size: 0.9em;
-}
-.entry-summary blockquote footer:before {
-  content: '—';
-}
+
 .post-entry img {
   max-width: 100%;
 }
@@ -537,6 +572,17 @@ body {
   letter-spacing: 2px;
   width: 800px;
   padding: 20px 0;
+}
+
+/*.main-content blockquote:before {
+  content: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/08/lotus.svg);
+  display: inline-block;
+  width: 5%;
+}*/
+blockquote:after {
+  content: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/08/lotus.svg);
+  display: inline-block;
+  width: 5%;
 }
 
 /* end BLOG styles */
@@ -606,31 +652,7 @@ body {
   color: #C589DD;
 }
 
-#sidebar .widget_search {
-  border-bottom: 1px solid #BFBFBF;
-}
-#sidebar .widget_search input[type="text"] {
-  border-top: 1px solid #a6a6a6;
-  border-bottom: 1px solid #a6a6a6;
-  border-left: 1px solid #a6a6a6;
-  border-right: none;
-  width: 200px;
-  height: 36px;
-  padding: 8px;
-  vertical-align: middle;
-}
-#sidebar .widget_search input[type="submit"] {
-  border-top: 1px solid #a6a6a6;
-  border-bottom: 1px solid #a6a6a6;
-  border-right: 1px solid #a6a6a6;
-  border-left: none;
-  width: 35px;
-  height: 36px;
-  background: url('img/white-arrow-right.png') no-repeat 13px 10px #45ac9d;
-  color: #ffffff;
-  margin-left: -5px;
-  vertical-align: middle;
-}
+
 #sidebar .widget_categories {
   padding: 80px 80px;
 }
@@ -795,12 +817,12 @@ body {
   border: 0;
 }
 
-/* PAGE STYLES */
+/* PAGE STYLES: "Work with Me"; */
 
 
 .default-page .main-content {
   background-color: #F7F7F7;
-  padding: 50px 300px;
+  padding: 50px 20%;
 }
 
 .post-entry {
@@ -877,7 +899,12 @@ body {
   padding: 100px 0;
   vertical-align: middle;
   color: white;
+  padding-bottom: 2rem;
   background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/08/list2.png) 48% 0/50% no-repeat;
+}
+
+.default-page blockquote.five-list:after {
+  content: "";
 }
 
 .default-page .button {
@@ -1079,6 +1106,7 @@ div.wpcf7 input[type=text] {
   font-size: 1rem;
   font-family: inherit;
   margin: 10px 0 30px 0;
+  border: #3b3b3b 1px solid;
 }
 
 div.wpcf7 textarea {
@@ -1122,7 +1150,7 @@ footer.page-footer {
   font-size: 12px;
   background-color: #3b3b3b;
   color: white;
-  padding: 75px 300px;
+  padding: 75px 2%;
   text-align: center;
 }
 
