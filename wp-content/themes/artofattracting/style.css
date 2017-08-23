@@ -455,9 +455,9 @@ body {
   width: 69%;
   padding: 75px 100px;
 }
-.post-entry {
+article.post-entry {
   border-bottom: 1px solid #bfbfbf;
-  padding-bottom: 30px;
+  padding: 1rem 0;
   margin-bottom: 30px;
 }
 
@@ -535,7 +535,7 @@ body {
   font-size: 0.82em;
 }
 .entry-footer {
-  margin-top: 1.5em;
+  margin: 1.5em 0;
 }
 .entry-footer .entry-terms a {
   color: #e10098;
@@ -574,11 +574,6 @@ body {
   padding: 20px 0;
 }
 
-/*.main-content blockquote:before {
-  content: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/08/lotus.svg);
-  display: inline-block;
-  width: 5%;
-}*/
 blockquote:after {
   content: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/08/lotus.svg);
   display: inline-block;
@@ -686,7 +681,7 @@ blockquote:after {
 
 /* Next / prev */
 #navigation {
-  background: #fff;
+  /*background: #fff;*/
   border: solid #bfbfbf;
   border-width: 1px 0;
   clear: both;
@@ -699,20 +694,23 @@ blockquote:after {
 }
 #navigation .left {
   float: left;
+  /*padding-left: 100px;*/
 }
 #navigation .right {
   float: right;
+  padding-right: 100px;
 }
 #navigation .left a,
 #navigation .right a {
-  color: #45ac9d;
+  color: #e10098;
+  opacity: 1.0;
   text-decoration: none;
-  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 #navigation .left a span,
 #navigation .right a span {
-  color: #150300;
+  color: #e10098;
 }
 #navigation .left a span {
   padding-left: 8px;
@@ -723,10 +721,11 @@ blockquote:after {
 #navigation .left a:hover,
 #navigation .right a:hover {
   text-decoration: none;
+  opacity: 0.6;
 }
 #navigation .left a:hover span,
 #navigation .right a:hover span {
-  text-decoration: underline;
+  text-decoration: none;
 }
 /* End next / prev */
 
@@ -734,6 +733,40 @@ blockquote:after {
 .single .post-entry {
   border-bottom: none;
 }
+
+.single-page {
+  background-color: #F7F7F7;
+  padding: 50px 5%;
+}
+
+.single-page .main-content {
+  float: left;
+  max-width: 60%;
+  margin-right: 1rem;
+}
+
+.single-page .main-content img {
+  width: 100%;
+  height: auto;
+}
+
+.single-page .main-content ul {
+  margin-left: 2rem;
+}
+
+.single-page .main-content ul li {
+  padding-left: 1rem;
+  text-indent: -2rem;
+  display: block;
+}
+
+.single-page li:before {
+  content: "△";
+  color: #e10098;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+}
+
 .comments-area {
   margin-bottom: 80px;
   clear: both;
@@ -742,11 +775,12 @@ blockquote:after {
 .comments-area .comments-title {
   border: solid #bfbfbf;
   border-width: 1px 0;
-  color: #150300;
-  font: 600 0.8em/49px 'OpenSans', Arial, sans-serif;
-  height: 49px;
+  color: #3b3b3b;
+  line-height: 50px;
+  height: 50px;
   text-transform: uppercase;
   margin: 15px 0;
+  letter-spacing: 1px;
 }
 .comment-list {
   margin-bottom: 50px;
@@ -773,48 +807,44 @@ blockquote:after {
   font-weight: 600;
 }
 .comments-area .comment-reply-title {
-  color: #45ac9d;
-  font: bold 1.176em 'Montserrat', 'OpenSans', Arial, sans-serif;
+  font-size: 1.5rem;
   text-transform: uppercase;
-  margin: 2em 0 1em;
+  letter-spacing: 1px;
+  margin: 2em 0 0 0;
+  color: #3b3b3b;
 }
 .comments-area .comment-reply-title a {
-  color: #45ac9d;
+  color: #e10098;
 }
 .comments-area .comment-reply-title a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  opacity: 0.6;
 }
-.comments-area .comment-form p {
-  font: 0.8em/2.08em 'OpenSans', Arial, sans-serif;
-  padding-bottom: 23px;
-}
+
 .comments-area .comment-form p a {
-  color: #45ac9d;
+  color: #e10098;
 }
 .comments-area .comment-form p a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  opacity: 0.6;
 }
 .comments-area .comment-form label {
   display: block;
-  font: 600 1em 'OpenSans', Arial, sans-serif;
   margin: 10px 0;
 }
 .comments-area .comment-form textarea {
   height: 180px;
   width: 100%;
-  resize: none;
-  font: 16px 'OpenSans', Arial, sans-serif;
-  padding: 5px 10px;
+  resize: vertical;
+  font: normal 1rem 'Montserrat, arial, sans-serif;
 }
-.comments-area .comment-form input[type="submit"] {
-  background: #45ac9d;
-  width: 206px;
-  height: 55px;
-  font: bold 1.3em/45px 'Montserrat', 'OpenSans', Arial, sans-serif;
-  color: #fff;
-  margin: 24px 0;
-  float: right;
-  border: 0;
+
+.comments-area .comment-form textarea#comment {
+  margin-bottom: 0;
+}
+
+.comments-area p.form-submit {
+  padding: 0;
 }
 
 /* PAGE STYLES: "Work with Me"; */
@@ -1015,6 +1045,9 @@ blockquote:after {
 
 /* SIDEBAR TEMPLATE STYLES*/
 
+div#sidebar {
+  float: right;
+}
 .sidebar-page {
   padding-bottom: 75px;
 }
@@ -1098,9 +1131,9 @@ div.sidebar-page-content {
   margin-bottom: 50px;
 }
 
-div.wpcf7 textarea,
-div.wpcf7 input[type=email],
-div.wpcf7 input[type=text] {
+textarea,
+input[type=email],
+input[type=text] {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
@@ -1124,8 +1157,7 @@ input[type=submit] {
   text-decoration: none;
   text-align: center;
   margin: 1.5rem 0;
-  font-weight: normal;
-  font-size: 12px;
+  font: normal 12px 'Montserrat', Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #e10098;
