@@ -140,12 +140,12 @@ body {
 /* HEADER STYLES */
 
 .page-header {
-  padding: 10px 70px;
+  padding: 0 70px;
   position: fixed;
   background: #fff;
   z-index: 1;
   width: 100%;
-  height: 200px;
+  height: 100px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -161,9 +161,9 @@ body {
 .page-header .top-logo {
   color: inherit;
   float: left;
-  height: 170px;
-  width: 470px;
-  background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/08/header-logo.svg) 0/100% no-repeat; 
+  height: 100px;
+  width: 320px;
+  background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/08/header-logo.svg) 0/325px no-repeat; 
   transition: none;
 }
 
@@ -184,7 +184,7 @@ body {
 }
 .page-header .top-nav ul li {
   display: inline;
-  line-height: 200px;
+  line-height: 100px;
 }
 .page-header .top-nav ul li a {
   color: inherit;
@@ -224,7 +224,11 @@ body {
   transform: scaleX(1);
 }
 
-@media (max-width: 1140px) {
+.page-header .toggle-nav {
+  display: none;
+}
+
+@media screen and (max-width: 1140px) {
   .page-header {
     height: auto;
     padding: 10px 20px;
@@ -240,13 +244,10 @@ body {
     float: none;
     height: 50px;
     text-align: center;
+    line-height: 50px;
   }
 
   .page-header .top-nav .menu-primary-menu-container {
-    height: 50px;
-  }
-
-  .page-header .top-nav ul#menu-primary-menu{
     height: 50px;
   }
 
@@ -255,9 +256,42 @@ body {
   }
 }
 
-@media (max-width: 620px) {
+@media screen and (max-width: 620px) {
   .page-header {
     padding: 20px 5% 30px 5%;
+  }
+
+  .page-header .top-nav {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .page-header .top-nav ul {
+    display: none;
+  }
+
+  .page-header ul {
+    width: 100%;
+    padding: 75px 18px;
+    border-radius:3px;
+  }
+
+  .menu ul:after {
+      width:0px;
+      height:0px;
+      position:absolute;
+      top:0%;
+      left:22px;
+      content:'';
+      transform:translate(0%, -100%);
+      border-left:7px solid transparent;
+      border-right:7px solid transparent;
+      border-bottom:7px solid #303030;
+  }
+
+  .page-header ul.active {
+    display: inline-block;
   }
 
   .page-header .top-nav ul li {
@@ -266,15 +300,31 @@ body {
   }
 
   .page-header .top-logo {
-  height: 150px;
-  width: 350px;
-  background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/logo4.svg) 85px 45px/70% no-repeat, 
-  url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/header2.png) 0 10px/100% no-repeat;
+  height: 100px;
+  width: auto;
+  background: url(http://localhost:8888/art_of_attracting/wp-content/uploads/2017/08/header-logo.svg) 50%/300px no-repeat; 
   }
 
+  .page-header .toggle-nav {
+      width: auto;
+      position: absolute;
+      display: inline-block;
+      top: 20px;
+      left: 50%;
+      margin-left: -31px;        
+      color:#3b3b3b;
+      text-transform: uppercase;
+      font-size: 12px;
+      transition:color linear 0.15s;
+    }
+ 
+    .toggle-nav:hover, .toggle-nav.active {
+        text-decoration:none;
+        color:#66a992;
+    }
+
   .page-header {
-    height: 500px;
-    position: static;
+    height: auto;
   }
 
   .page-header:after {
@@ -315,7 +365,7 @@ body {
   margin-top: -40px;
 }
 
-@media (max-width: 1130px) {
+@media screen and (max-width: 1130px) {
   .landing-header {
   background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 600px 50px/350px no-repeat, #7cf0e1;
   background: url('http://localhost:8888/art_of_attracting/wp-content/uploads/2017/07/jess_banner.png') 600px 50px/350px no-repeat, -moz-linear-gradient(-45deg, #DB39A5 0%, #88a6ec 80%);
@@ -328,7 +378,7 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .landing-header {
     background: #7cf0e1;
     background: -moz-linear-gradient(-45deg, #DB39A5 0%, #88a6ec 80%);
@@ -337,7 +387,13 @@ body {
   }
 }
 
-@media (max-width: 620px) {
+@media screen and (max-width: 620px) {
+  .landing-header {
+    padding-top: 200px;
+    padding-bottom: 50px;
+    height: auto;
+  }
+
   .landing-header h1 {
     text-align: center;
     display: block;
@@ -455,7 +511,7 @@ body {
   padding-bottom: 0;
 }
 
-@media (max-width: 1070px) {
+@media screen and (max-width: 1070px) {
   .landing-about,
   .landing-steps {
     padding: 75px 5%;
@@ -473,7 +529,7 @@ body {
   }
 }
 
-@media (max-width: 620px) {
+@media screen and (max-width: 620px) {
   .landing-steps > h2:before,
   .landing-steps > h2:after {
   width: 25%;
@@ -529,30 +585,26 @@ body {
   cursor: pointer;
 }
 
-/** From blog.css **/
+/* BLOG styles */
 
 #main {
-  padding-top: 200px;
+  padding-top: 100px;
   width: 100%;
-  margin: 0 auto;
 }
 
-@media (max-width: 620px) {
+@media screen and (max-width: 620px) {
   #main {
     padding-top: 0;
   }
 }
-
-/* BLOG styles */
-
 .blog .main-content {
   float: left;
-  width: 69%;
-  padding: 75px 100px;
+  width: 65%;
+  padding: 75px 50px;
 }
 article.post-entry {
   border-bottom: 1px solid #bfbfbf;
-  padding: 1rem 0;
+  padding: 0 0 1rem 0;
   margin-bottom: 30px;
 }
 
@@ -668,6 +720,14 @@ blockquote:after {
   height: auto;
 }
 
+@media screen and (max-width: 1140px) {
+  .blog .main-content {
+    float: none;
+    width: 100%;
+    padding: 50px 5%;
+  }
+}
+
 /* end BLOG styles */
 
 /* CATEGORY STYLES */
@@ -682,14 +742,20 @@ blockquote:after {
 
 .category-page .category-content {
   float: left;
-  width: 69%;
-  padding: 75px 100px;
+  width: 65%;
+  padding: 75px 50px;
+}
+
+@media screen and (max-width: 1140px) {
+  .category-page .category-content {
+    width: 100%;
+  }
 }
 
 /* sidebar */
 #sidebar {
   width: 400px;
-  display: inline-block;
+  float: right;
 }
 #sidebar li {
   list-style-type: none;
@@ -768,6 +834,19 @@ blockquote:after {
   color: #e10098;
 }
 
+@media screen and (max-width: 1140px) {
+  #sidebar {
+    float: none;
+    display: inline-block;
+    width: 100%;
+  }
+
+  #sidebar #primary-sidebar {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+
 /* Next / prev */
 #navigation {
   /*background: #fff;*/
@@ -783,11 +862,11 @@ blockquote:after {
 }
 #navigation .left {
   float: left;
-  /*padding-left: 100px;*/
+  padding-left: 50px;
 }
 #navigation .right {
   float: right;
-  padding-right: 100px;
+  padding-right: 50px;
 }
 #navigation .left a,
 #navigation .right a {
@@ -825,13 +904,13 @@ blockquote:after {
 
 .single-page {
   background-color: #F7F7F7;
-  padding: 50px 5%;
+  width: 100%;
 }
 
 .single-page .main-content {
   float: left;
-  max-width: 60%;
-  margin-right: 1rem;
+  max-width: 65%;
+  padding: 75px 50px;
 }
 
 .single-page .main-content img {
@@ -925,7 +1004,7 @@ blockquote:after {
   height: 180px;
   width: 100%;
   resize: vertical;
-  font: normal 1rem 'Montserrat, arial, sans-serif;
+  font: normal 1rem 'Montserrat', arial, sans-serif;
 }
 
 .comments-area .comment-form textarea#comment {
@@ -936,6 +1015,13 @@ blockquote:after {
   padding: 0;
 }
 
+@media screen and (max-width: 1140px) {
+  .single-page .main-content {
+    float: none;
+    max-width: 100%;
+    padding: 50px 5%;
+  }
+}
 /* PAGE STYLES: "Work with Me"; */
 
 
@@ -1046,13 +1132,13 @@ blockquote:after {
   opacity: 1;
 }
 
-@media (max-width: 1140px) {
+@media screen and (max-width: 1140px) {
   .default-page .main-content {
     padding: 50px 5%;
   }
 }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
   .post-entry h2:before,
   .post-entry h2:after {
     display: none;
@@ -1184,7 +1270,7 @@ blockquote:after {
   padding: 0.5rem 0;
 }
 
-@media (max-width: 1140px) {
+@media screen and (max-width: 1140px) {
   .sidebar-page-content {
     width: 100%;
     padding: 50px 5%;
@@ -1200,7 +1286,6 @@ blockquote:after {
     width: 400px;
     margin: 0 auto;
   }
-
 }
 
 /* CONTACT PAGE STYLES */
@@ -1254,6 +1339,13 @@ input[type=submit]:hover {
   color: white;
   opacity: 1;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1140px) {
+  .contact-page-form {
+  max-width: 600px;
+  margin: 0 auto;
+  }
 }
 
 /* Footer Styles */

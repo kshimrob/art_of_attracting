@@ -32,7 +32,9 @@
 
 			<nav class="top-nav">
 				<?php wp_nav_menu(array('theme_location' => 'primary-menu')); ?>
+				<a class="toggle-nav" href="#">&#9776; Menu</a>
 			</nav>
+			
 		</header>
 
 		<div id="main" class="site-main">
